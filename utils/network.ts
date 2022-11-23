@@ -43,3 +43,12 @@ export function getMnemonic(networkName?: string): string {
 export function accounts(networkName?: string): {mnemonic: string} {
   return {mnemonic: getMnemonic(networkName)};
 }
+ 
+export function apiKey(networkName: string): string {
+ 
+  const uri = process.env['ETH_NODE_APIKEY_' + networkName.toUpperCase()];
+  if (uri && uri !== '') {
+    return uri;
+  }
+  return "";
+}
