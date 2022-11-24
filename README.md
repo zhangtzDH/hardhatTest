@@ -40,10 +40,11 @@
 
 npx hardhat verify --contract "src/Token.sol" --network goerli 0xB129819C758c850999236be318DbCd1696bB118F
 npx hardhat verify --network goerli 0xB129819C758c850999236be318DbCd1696bB118F
-npx hardhat verify --network <goerli> <DEPLOYED_CONTRACT_ADDRESS> "Constructor argument 1"
 
 npx hardhat verify --network goerli 0xB129819C758c850999236be318DbCd1696bB118F 000000000000000000000000983f185f303c7ed0543b65721657ace16cb19ceb
 
 yarn hardhat --network polygonMumbai deploy
 
 npx hardhat verify --network polygonMumbai 0x3BE4c41BFe994B127881630D0eeb9e350E633749 0x983f185F303C7eD0543b65721657aCE16cB19CeB
+
+npx hardhat run --network polygonMumbai scripts/deploy.js
